@@ -8,5 +8,6 @@ namespace GroupProject.Search
 {
     class clsSearchSQL
     {
+        //Doing all SQL inquiries here
     }
 }

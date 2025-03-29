@@ -23,5 +23,8 @@ namespace GroupProject.Search
         {
             InitializeComponent();
         }
+
+        //sSelectedInvoiceID - Holds the invoice ID if the user selected one, and zero if no invoice is selected
+        //SelectedInvoiceID - Property main window can access to get the selected invoice ID
     }
 }

@@ -6,7 +6,41 @@
         xmlns:local="clr-namespace:GroupProject.Search"
         mc:Ignorable="d"
         Title="wndSearch" Height="450" Width="800">
-    <Grid>
-        
+    <Grid Background="#595959">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Button x:Name="clearFilterBTN" Content="Cancel or&#xD;&#xA;Clear Filter" HorizontalAlignment="Center" Margin="0,42,0,0" VerticalAlignment="Top" Height="57" Width="100" Grid.Column="2" FontSize="17"/>
+        <Button x:Name="selectInvoiceBTN" Content="Select Invoice" HorizontalAlignment="Left" Margin="10,52,0,0" VerticalAlignment="Top" Height="37" Width="122" Grid.Column="3" FontSize="18"/>
+
+        <Label x:Name="invoiceNumberLBL" Content="Invoice Number:" HorizontalAlignment="Left" Margin="44,22,0,0" VerticalAlignment="Top" Width="146" Height="22" FontSize="20"/>
+        <Label x:Name="invoiceDateLBL" Content="Invoice Date:" HorizontalAlignment="Left" Margin="76,54,0,0" VerticalAlignment="Top" Height="26" Width="114" FontSize="20"/>
+        <Label x:Name="totalCostsLBL" Content="Total Costs:" HorizontalAlignment="Left" Margin="89,89,0,0" VerticalAlignment="Top" Height="27" Width="101" FontSize="20"/>
+        <ComboBox x:Name="invoiceNumberCB" Margin="29,28,33,157" Grid.Column="1">
+            <ComboBoxItem Content="Test Content 1"/>
+            <ComboBoxItem Content="Test Content 2"/>
+            <ComboBoxItem Content="Test Content 3"/>
+        </ComboBox>
+        <ComboBox x:Name="invoiceDateCB" Margin="29,62,33,123" Grid.Column="1">
+            <ComboBoxItem Content="Test Content 1"/>
+            <ComboBoxItem Content="Test Content 2"/>
+            <ComboBoxItem Content="Test Content 3"/>
+        </ComboBox>
+        <ComboBox x:Name="totalCostsCB" Margin="29,95,33,90" Grid.Column="1">
+            <ComboBoxItem Content="Test Content 1"/>
+            <ComboBoxItem Content="Test Content 2"/>
+            <ComboBoxItem Content="Test Content 3"/>
+        </ComboBox>
+        <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}" Margin="9,47,9,46" Grid.Row="1" Grid.ColumnSpan="2" Grid.Column="1"/>
+        <Label x:Name="allInvoicesLBL" Grid.Column="1" Content="All Invoices" HorizontalAlignment="Center" Margin="0,10,0,0" Grid.Row="1" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="100" FontSize="20"/>
+
     </Grid>
 </Window>
