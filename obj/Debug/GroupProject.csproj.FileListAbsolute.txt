@@ -17,3 +17,24 @@ C:\Users\Brayd\Box\2025-Spring\cs3280-Object_Oriented_Windows_using_C#\GroupProj
 C:\Users\Brayd\Box\2025-Spring\cs3280-Object_Oriented_Windows_using_C#\GroupProject\obj\Debug\GroupProject.csproj.CoreCompileInputs.cache
 C:\Users\Brayd\Box\2025-Spring\cs3280-Object_Oriented_Windows_using_C#\GroupProject\obj\Debug\GroupProject.exe
 C:\Users\Brayd\Box\2025-Spring\cs3280-Object_Oriented_Windows_using_C#\GroupProject\obj\Debug\GroupProject.pdb
+C:\Users\Garrett Otto\Desktop\3rd Year (2024-2025)\1st Semester\CS2810\GitHub\CS3280-GroupProject\bin\Debug\GroupProject.exe.config
+C:\Users\Garrett Otto\Desktop\3rd Year (2024-2025)\1st Semester\CS2810\GitHub\CS3280-GroupProject\bin\Debug\GroupProject.exe
+C:\Users\Garrett Otto\Desktop\3rd Year (2024-2025)\1st Semester\CS2810\GitHub\CS3280-GroupProject\bin\Debug\GroupProject.pdb
+C:\Users\Garrett Otto\Desktop\3rd Year (2024-2025)\1st Semester\CS2810\GitHub\CS3280-GroupProject\obj\Debug\GroupProject.csproj.AssemblyReference.cache
+C:\Users\Garrett Otto\Desktop\3rd Year (2024-2025)\1st Semester\CS2810\GitHub\CS3280-GroupProject\obj\Debug\Theme.baml
+C:\Users\Garrett Otto\Desktop\3rd Year (2024-2025)\1st Semester\CS2810\GitHub\CS3280-GroupProject\obj\Debug\Items\wndItems.g.cs
+C:\Users\Garrett Otto\Desktop\3rd Year (2024-2025)\1st Semester\CS2810\GitHub\CS3280-GroupProject\obj\Debug\Main\wndMain.g.cs
+C:\Users\Garrett Otto\Desktop\3rd Year (2024-2025)\1st Semester\CS2810\GitHub\CS3280-GroupProject\obj\Debug\Search\wndSearch.g.cs
+C:\Users\Garrett Otto\Desktop\3rd Year (2024-2025)\1st Semester\CS2810\GitHub\CS3280-GroupProject\obj\Debug\App.g.cs
+C:\Users\Garrett Otto\Desktop\3rd Year (2024-2025)\1st Semester\CS2810\GitHub\CS3280-GroupProject\obj\Debug\GroupProject_MarkupCompile.cache
+C:\Users\Garrett Otto\Desktop\3rd Year (2024-2025)\1st Semester\CS2810\GitHub\CS3280-GroupProject\obj\Debug\GroupProject_MarkupCompile.lref
+C:\Users\Garrett Otto\Desktop\3rd Year (2024-2025)\1st Semester\CS2810\GitHub\CS3280-GroupProject\obj\Debug\Items\wndItems.baml
+C:\Users\Garrett Otto\Desktop\3rd Year (2024-2025)\1st Semester\CS2810\GitHub\CS3280-GroupProject\obj\Debug\Main\wndMain.baml
+C:\Users\Garrett Otto\Desktop\3rd Year (2024-2025)\1st Semester\CS2810\GitHub\CS3280-GroupProject\obj\Debug\Search\wndSearch.baml
+C:\Users\Garrett Otto\Desktop\3rd Year (2024-2025)\1st Semester\CS2810\GitHub\CS3280-GroupProject\obj\Debug\GroupProject.g.resources
+C:\Users\Garrett Otto\Desktop\3rd Year (2024-2025)\1st Semester\CS2810\GitHub\CS3280-GroupProject\obj\Debug\GroupProject.Properties.Resources.resources
+C:\Users\Garrett Otto\Desktop\3rd Year (2024-2025)\1st Semester\CS2810\GitHub\CS3280-GroupProject\obj\Debug\GroupProject.csproj.GenerateResource.cache
+C:\Users\Garrett Otto\Desktop\3rd Year (2024-2025)\1st Semester\CS2810\GitHub\CS3280-GroupProject\obj\Debug\GroupProject.csproj.CoreCompileInputs.cache
+C:\Users\Garrett Otto\Desktop\3rd Year (2024-2025)\1st Semester\CS2810\GitHub\CS3280-GroupProject\obj\Debug\GroupProject.exe
+C:\Users\Garrett Otto\Desktop\3rd Year (2024-2025)\1st Semester\CS2810\GitHub\CS3280-GroupProject\obj\Debug\GroupProject.pdb
+C:\Users\Garrett Otto\Desktop\3rd Year (2024-2025)\1st Semester\CS2810\GitHub\CS3280-GroupProject\obj\Debug\App.baml

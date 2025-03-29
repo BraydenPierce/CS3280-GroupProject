@@ -18,8 +18,8 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <Button x:Name="clearFilterBTN" Content="Cancel or&#xD;&#xA;Clear Filter" HorizontalAlignment="Center" Margin="0,42,0,0" VerticalAlignment="Top" Height="57" Width="100" Grid.Column="2" FontSize="17"/>
-        <Button x:Name="selectInvoiceBTN" Content="Select Invoice" HorizontalAlignment="Left" Margin="10,52,0,0" VerticalAlignment="Top" Height="37" Width="122" Grid.Column="3" FontSize="18"/>
+        <Button x:Name="clearFilterBTN" Content="Cancel or Clear Filter" HorizontalAlignment="Center" Margin="0,52,0,0" VerticalAlignment="Top" Height="37" Width="180" Grid.Column="2" FontSize="17" Click="clearFilterBTN_Click"/>
+        <Button x:Name="selectInvoiceBTN" Content="Select Invoice" HorizontalAlignment="Left" Margin="10,52,0,0" VerticalAlignment="Top" Height="37" Width="122" Grid.Column="3" FontSize="18" Click="selectInvoiceBTN_Click"/>
 
         <Label x:Name="invoiceNumberLBL" Content="Invoice Number:" HorizontalAlignment="Left" Margin="44,22,0,0" VerticalAlignment="Top" Width="146" Height="22" FontSize="20"/>
         <Label x:Name="invoiceDateLBL" Content="Invoice Date:" HorizontalAlignment="Left" Margin="76,54,0,0" VerticalAlignment="Top" Height="26" Width="114" FontSize="20"/>
