@@ -5,8 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GroupProject.Main"
         mc:Ignorable="d"
-        Title="wndMain" Height="450" Width="800">
-    <Grid>
-        
+        Title="wndMain" Height="297" Width="579">
+    <Grid Background="#595959">
+        <Menu Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <MenuItem Header="Search"/>
+            <MenuItem Header="Edit Items"/>
+        </Menu>
+        <Label x:Name="lblInvoiceDate" Content="Invoice Date:" HorizontalAlignment="Left" Margin="25,44,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblInvoiceNum" Content="Invoice Number:" HorizontalAlignment="Left" Margin="25,72,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblTotalCost" Content="Total Cost:" HorizontalAlignment="Left" Margin="25,103,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblDateDisplay" Content="*DATE GOES HERE*" HorizontalAlignment="Left" Margin="130,44,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblCostDisplay" Content="*COST GOES HERE" HorizontalAlignment="Left" Margin="130,103,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblNumDisplay" Content="*NUM GOES HERE*" HorizontalAlignment="Left" Margin="130,72,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblItems" Content="Items: " HorizontalAlignment="Left" Margin="25,142,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblCost" Content="Cost:" HorizontalAlignment="Left" Margin="25,177,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblInvoiceItems" Content="Items on Invoice: " HorizontalAlignment="Left" Margin="341,44,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnEdit" Content="Edit Invoice" HorizontalAlignment="Left" Margin="236,226,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnSave" Content="Save Invoice" HorizontalAlignment="Left" Margin="341,226,0,0" VerticalAlignment="Top"/>
+        <ComboBox HorizontalAlignment="Left" Margin="74,139,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="lblItemCost" Content="*ITEM COST GOES HERE*" HorizontalAlignment="Left" Margin="74,177,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnAddItem" Content="Add Item" HorizontalAlignment="Left" Margin="244,139,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnRemoveItem" Content="Remove Item" HorizontalAlignment="Center" Margin="0,176,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnAddInvoice" Content="Add Invoice" HorizontalAlignment="Left" Margin="130,226,0,0" VerticalAlignment="Top"/>
+        <DataGrid x:Name="grdInvoiceItems" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="341,70,32,83"/>
     </Grid>
 </Window>
