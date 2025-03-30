@@ -1,30 +1,30 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Garrett Otto\\Desktop\\3rd Year (2024-2025)\\1st Semester\\CS2810\\GitHub\\CS3280-GroupProject\\",
+  "WorkspaceRootPath": "C:\\Users\\Brayd\\Box\\2025-Spring\\cs3280-Object_Oriented_Windows_using_C#\\CS3280-GroupProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0D8B2C21-6B9E-4117-9457-CCDB35D8919B}|GroupProject.csproj|c:\\users\\garrett otto\\desktop\\3rd year (2024-2025)\\1st semester\\cs2810\\github\\cs3280-groupproject\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{0D8B2C21-6B9E-4117-9457-CCDB35D8919B}|GroupProject.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{0D8B2C21-6B9E-4117-9457-CCDB35D8919B}|GroupProject.csproj|c:\\users\\brayd\\box\\2025-spring\\cs3280-object_oriented_windows_using_c#\\cs3280-groupproject\\items\\wnditems.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{0D8B2C21-6B9E-4117-9457-CCDB35D8919B}|GroupProject.csproj|solutionrelative:items\\wnditems.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0D8B2C21-6B9E-4117-9457-CCDB35D8919B}|GroupProject.csproj|c:\\users\\garrett otto\\desktop\\3rd year (2024-2025)\\1st semester\\cs2810\\github\\cs3280-groupproject\\search\\wndsearch.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{0D8B2C21-6B9E-4117-9457-CCDB35D8919B}|GroupProject.csproj|solutionrelative:search\\wndsearch.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{0D8B2C21-6B9E-4117-9457-CCDB35D8919B}|GroupProject.csproj|c:\\users\\brayd\\box\\2025-spring\\cs3280-object_oriented_windows_using_c#\\cs3280-groupproject\\items\\clsitemslogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D8B2C21-6B9E-4117-9457-CCDB35D8919B}|GroupProject.csproj|solutionrelative:items\\clsitemslogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0D8B2C21-6B9E-4117-9457-CCDB35D8919B}|GroupProject.csproj|c:\\users\\garrett otto\\desktop\\3rd year (2024-2025)\\1st semester\\cs2810\\github\\cs3280-groupproject\\search\\clssearchsql.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0D8B2C21-6B9E-4117-9457-CCDB35D8919B}|GroupProject.csproj|c:\\users\\brayd\\box\\2025-spring\\cs3280-object_oriented_windows_using_c#\\cs3280-groupproject\\items\\clsitemssql.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D8B2C21-6B9E-4117-9457-CCDB35D8919B}|GroupProject.csproj|solutionrelative:items\\clsitemssql.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0D8B2C21-6B9E-4117-9457-CCDB35D8919B}|GroupProject.csproj|c:\\users\\brayd\\box\\2025-spring\\cs3280-object_oriented_windows_using_c#\\cs3280-groupproject\\main\\clsmainsql.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D8B2C21-6B9E-4117-9457-CCDB35D8919B}|GroupProject.csproj|solutionrelative:main\\clsmainsql.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0D8B2C21-6B9E-4117-9457-CCDB35D8919B}|GroupProject.csproj|c:\\users\\brayd\\box\\2025-spring\\cs3280-object_oriented_windows_using_c#\\cs3280-groupproject\\main\\clsmainlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D8B2C21-6B9E-4117-9457-CCDB35D8919B}|GroupProject.csproj|solutionrelative:main\\clsmainlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0D8B2C21-6B9E-4117-9457-CCDB35D8919B}|GroupProject.csproj|c:\\users\\brayd\\box\\2025-spring\\cs3280-object_oriented_windows_using_c#\\cs3280-groupproject\\search\\clssearchsql.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0D8B2C21-6B9E-4117-9457-CCDB35D8919B}|GroupProject.csproj|solutionrelative:search\\clssearchsql.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0D8B2C21-6B9E-4117-9457-CCDB35D8919B}|GroupProject.csproj|c:\\users\\garrett otto\\desktop\\3rd year (2024-2025)\\1st semester\\cs2810\\github\\cs3280-groupproject\\search\\wndsearch.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0D8B2C21-6B9E-4117-9457-CCDB35D8919B}|GroupProject.csproj|solutionrelative:search\\wndsearch.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0D8B2C21-6B9E-4117-9457-CCDB35D8919B}|GroupProject.csproj|c:\\users\\garrett otto\\desktop\\3rd year (2024-2025)\\1st semester\\cs2810\\github\\cs3280-groupproject\\search\\clssearchlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0D8B2C21-6B9E-4117-9457-CCDB35D8919B}|GroupProject.csproj|solutionrelative:search\\clssearchlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0D8B2C21-6B9E-4117-9457-CCDB35D8919B}|GroupProject.csproj|c:\\users\\garrett otto\\desktop\\3rd year (2024-2025)\\1st semester\\cs2810\\github\\cs3280-groupproject\\common\\clsinvoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0D8B2C21-6B9E-4117-9457-CCDB35D8919B}|GroupProject.csproj|solutionrelative:common\\clsinvoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -45,79 +45,88 @@
               "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "wndSearch.xaml",
-              "DocumentMoniker": "C:\\Users\\Garrett Otto\\Desktop\\3rd Year (2024-2025)\\1st Semester\\CS2810\\GitHub\\CS3280-GroupProject\\Search\\wndSearch.xaml",
-              "RelativeDocumentMoniker": "Search\\wndSearch.xaml",
-              "ToolTip": "C:\\Users\\Garrett Otto\\Desktop\\3rd Year (2024-2025)\\1st Semester\\CS2810\\GitHub\\CS3280-GroupProject\\Search\\wndSearch.xaml",
-              "RelativeToolTip": "Search\\wndSearch.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-29T21:00:58.972Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "wndSearch.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Garrett Otto\\Desktop\\3rd Year (2024-2025)\\1st Semester\\CS2810\\GitHub\\CS3280-GroupProject\\Search\\wndSearch.xaml.cs",
-              "RelativeDocumentMoniker": "Search\\wndSearch.xaml.cs",
-              "ToolTip": "C:\\Users\\Garrett Otto\\Desktop\\3rd Year (2024-2025)\\1st Semester\\CS2810\\GitHub\\CS3280-GroupProject\\Search\\wndSearch.xaml.cs",
-              "RelativeToolTip": "Search\\wndSearch.xaml.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAQwDcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-29T21:01:00.706Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "clsSearchSQL.cs",
-              "DocumentMoniker": "C:\\Users\\Garrett Otto\\Desktop\\3rd Year (2024-2025)\\1st Semester\\CS2810\\GitHub\\CS3280-GroupProject\\Search\\clsSearchSQL.cs",
-              "RelativeDocumentMoniker": "Search\\clsSearchSQL.cs",
-              "ToolTip": "C:\\Users\\Garrett Otto\\Desktop\\3rd Year (2024-2025)\\1st Semester\\CS2810\\GitHub\\CS3280-GroupProject\\Search\\clsSearchSQL.cs",
-              "RelativeToolTip": "Search\\clsSearchSQL.cs",
-              "ViewState": "AgIAALUAAAAAAAAAAAAYwM4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-29T21:01:04.667Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "App.xaml",
-              "DocumentMoniker": "C:\\Users\\Garrett Otto\\Desktop\\3rd Year (2024-2025)\\1st Semester\\CS2810\\GitHub\\CS3280-GroupProject\\App.xaml",
-              "RelativeDocumentMoniker": "App.xaml",
-              "ToolTip": "C:\\Users\\Garrett Otto\\Desktop\\3rd Year (2024-2025)\\1st Semester\\CS2810\\GitHub\\CS3280-GroupProject\\App.xaml*",
-              "RelativeToolTip": "App.xaml*",
+              "Title": "wndItems.xaml",
+              "DocumentMoniker": "C:\\Users\\Brayd\\Box\\2025-Spring\\cs3280-Object_Oriented_Windows_using_C#\\CS3280-GroupProject\\Items\\wndItems.xaml",
+              "RelativeDocumentMoniker": "Items\\wndItems.xaml",
+              "ToolTip": "C:\\Users\\Brayd\\Box\\2025-Spring\\cs3280-Object_Oriented_Windows_using_C#\\CS3280-GroupProject\\Items\\wndItems.xaml",
+              "RelativeToolTip": "Items\\wndItems.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-29T21:41:00.853Z",
+              "WhenOpened": "2025-03-30T03:01:12.296Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "clsItemsLogic.cs",
+              "DocumentMoniker": "C:\\Users\\Brayd\\Box\\2025-Spring\\cs3280-Object_Oriented_Windows_using_C#\\CS3280-GroupProject\\Items\\clsItemsLogic.cs",
+              "RelativeDocumentMoniker": "Items\\clsItemsLogic.cs",
+              "ToolTip": "C:\\Users\\Brayd\\Box\\2025-Spring\\cs3280-Object_Oriented_Windows_using_C#\\CS3280-GroupProject\\Items\\clsItemsLogic.cs",
+              "RelativeToolTip": "Items\\clsItemsLogic.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-30T03:01:10.325Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "clsSearchLogic.cs",
-              "DocumentMoniker": "C:\\Users\\Garrett Otto\\Desktop\\3rd Year (2024-2025)\\1st Semester\\CS2810\\GitHub\\CS3280-GroupProject\\Search\\clsSearchLogic.cs",
-              "RelativeDocumentMoniker": "Search\\clsSearchLogic.cs",
-              "ToolTip": "C:\\Users\\Garrett Otto\\Desktop\\3rd Year (2024-2025)\\1st Semester\\CS2810\\GitHub\\CS3280-GroupProject\\Search\\clsSearchLogic.cs",
-              "RelativeToolTip": "Search\\clsSearchLogic.cs",
+              "Title": "clsMainLogic.cs",
+              "DocumentMoniker": "C:\\Users\\Brayd\\Box\\2025-Spring\\cs3280-Object_Oriented_Windows_using_C#\\CS3280-GroupProject\\Main\\clsMainLogic.cs",
+              "RelativeDocumentMoniker": "Main\\clsMainLogic.cs",
+              "ToolTip": "C:\\Users\\Brayd\\Box\\2025-Spring\\cs3280-Object_Oriented_Windows_using_C#\\CS3280-GroupProject\\Main\\clsMainLogic.cs",
+              "RelativeToolTip": "Main\\clsMainLogic.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-29T21:01:07.183Z",
+              "WhenOpened": "2025-03-30T02:59:43.718Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "clsMainSQL.cs",
+              "DocumentMoniker": "C:\\Users\\Brayd\\Box\\2025-Spring\\cs3280-Object_Oriented_Windows_using_C#\\CS3280-GroupProject\\Main\\clsMainSQL.cs",
+              "RelativeDocumentMoniker": "Main\\clsMainSQL.cs",
+              "ToolTip": "C:\\Users\\Brayd\\Box\\2025-Spring\\cs3280-Object_Oriented_Windows_using_C#\\CS3280-GroupProject\\Main\\clsMainSQL.cs",
+              "RelativeToolTip": "Main\\clsMainSQL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-30T02:59:40.59Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "clsInvoice.cs",
-              "DocumentMoniker": "C:\\Users\\Garrett Otto\\Desktop\\3rd Year (2024-2025)\\1st Semester\\CS2810\\GitHub\\CS3280-GroupProject\\Common\\clsInvoice.cs",
-              "RelativeDocumentMoniker": "Common\\clsInvoice.cs",
-              "ToolTip": "C:\\Users\\Garrett Otto\\Desktop\\3rd Year (2024-2025)\\1st Semester\\CS2810\\GitHub\\CS3280-GroupProject\\Common\\clsInvoice.cs",
-              "RelativeToolTip": "Common\\clsInvoice.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "clsSearchSQL.cs",
+              "DocumentMoniker": "C:\\Users\\Brayd\\Box\\2025-Spring\\cs3280-Object_Oriented_Windows_using_C#\\CS3280-GroupProject\\Search\\clsSearchSQL.cs",
+              "RelativeDocumentMoniker": "Search\\clsSearchSQL.cs",
+              "ToolTip": "C:\\Users\\Brayd\\Box\\2025-Spring\\cs3280-Object_Oriented_Windows_using_C#\\CS3280-GroupProject\\Search\\clsSearchSQL.cs",
+              "RelativeToolTip": "Search\\clsSearchSQL.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-29T21:01:12.709Z",
+              "WhenOpened": "2025-03-30T02:59:37.176Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "clsItemsSQL.cs",
+              "DocumentMoniker": "C:\\Users\\Brayd\\Box\\2025-Spring\\cs3280-Object_Oriented_Windows_using_C#\\CS3280-GroupProject\\Items\\clsItemsSQL.cs",
+              "RelativeDocumentMoniker": "Items\\clsItemsSQL.cs",
+              "ToolTip": "C:\\Users\\Brayd\\Box\\2025-Spring\\cs3280-Object_Oriented_Windows_using_C#\\CS3280-GroupProject\\Items\\clsItemsSQL.cs",
+              "RelativeToolTip": "Items\\clsItemsSQL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGEAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-30T01:49:38.181Z",
               "EditorCaption": ""
             }
           ]

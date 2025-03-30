@@ -8,5 +8,6 @@ namespace GroupProject.Items
 {
     class clsItemsLogic
     {
+        //public List<clsItem.cs> GetItems()
     }
 }

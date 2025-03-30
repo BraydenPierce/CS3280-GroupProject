@@ -6,7 +6,48 @@
         xmlns:local="clr-namespace:GroupProject.Items"
         mc:Ignorable="d"
         Title="wndItems" Height="450" Width="800">
-    <Grid>
-        
+    <Grid Background="#595959">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="2*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Label Content="Code: " VerticalAlignment="Center"/>
+                    <TextBox x:Name="tbCode" Margin="15" Width="300"/>
+                </StackPanel>
+            </Grid>
+            <Grid Grid.Row="1">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Label Content="Cost: " VerticalAlignment="Center"/>
+                    <TextBox x:Name="tbCost" Margin="15" Width="300"/>
+                </StackPanel>
+            </Grid>
+            <Grid Grid.Row="2">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Label Content="Description: " VerticalAlignment="Center"/>
+                    <TextBox x:Name="tbDescription" Margin="15" Width="270"/>
+                </StackPanel>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="1">
+            <StackPanel Orientation="Vertical">
+                <Button x:Name="btnAddItem" Content="Add Item" Margin="15" Height="40" Click="btnAddItem_Click"/>
+                <Button x:Name="btnEditItem" Content="Edit Item" Margin="15" Height="40" Click="btnEditItem_Click"/>
+                <Button x:Name="btnDeleteItem" Content="Delete Item" Margin="15" Height="40" Click="btnDeleteItem_Click"/>
+            </StackPanel>
+        </Grid>
+        <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}" Grid.RowSpan="2" Grid.Column="1" Margin="15"/>
+
     </Grid>
 </Window>
