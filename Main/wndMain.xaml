@@ -8,8 +8,8 @@
         Title="wndMain" Height="297" Width="579">
     <Grid Background="#595959">
         <Menu Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top">
-            <MenuItem Header="Search"/>
-            <MenuItem Header="Edit Items"/>
+            <MenuItem Header="Search" Click="Search_Click"/>
+            <MenuItem Header="Edit Items" Click="Edit_Click"/>
         </Menu>
         <Label x:Name="lblInvoiceDate" Content="Invoice Date:" HorizontalAlignment="Left" Margin="25,44,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lblInvoiceNum" Content="Invoice Number:" HorizontalAlignment="Left" Margin="25,72,0,0" VerticalAlignment="Top"/>
