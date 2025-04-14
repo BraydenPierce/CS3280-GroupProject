@@ -9,6 +9,7 @@ namespace GroupProject.Items
 {
     class clsItemsLogic
     {
+        private clsDataAccess db;
         //public List<clsItem.cs> GetItems()
         public List<clsItem> GetItems()
     }
