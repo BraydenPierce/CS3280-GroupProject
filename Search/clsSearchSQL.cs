@@ -11,22 +11,15 @@ namespace GroupProject.Search
 {
     class clsSearchSQL
     {
-        /*
-           Overall Note:
-           - I tested all queries in Microsoft Access to ensure they work
-           - I got all SQL statements from the Database Help.doc provided from the professor
-        */
-
         /// <summary>
         /// This SQL returns a string to get all the invoices
         /// </summary>
         /// <returns></returns>
-        public string GetInvoices()
+        /// <exception cref="Exception"></exception>
+        public static string GetInvoices()
         {
             try
             {
-                //GetInvoices()
-                //  SELECT * FROM Invoices
                 string sSQL = "SELECT * FROM Invoices";
                 return sSQL;
             }
@@ -36,16 +29,17 @@ namespace GroupProject.Search
             }
         }
         /// <summary>
-        /// This SQL returns all invoices with the Num 5000
+        /// This returns the invoice information with a specific invoice number and integer
         /// </summary>
+        /// <param name="InvoiceNum"></param>
+        /// <param name="integer"></param>
         /// <returns></returns>
-        public string GetInvoiceNum5000()
+        /// <exception cref="Exception"></exception>
+        public static string GetInvoiceFromNum(int InvoiceNum, int integer)
         {
             try
             {
-                //GetInvoiceNum5000()
-                //  SELECT * FROM Invoices WHERE InvoiceNum = 5000
-                string sSQL = "SELECT * FROM Invoices WHERE InvoiceNum = 5000";
+                string sSQL = "SELECT * FROM Invoices WHERE " + InvoiceNum + " = " + integer + "";
                 return sSQL;
             }
             catch (Exception ex)
@@ -54,17 +48,17 @@ namespace GroupProject.Search
             }
         }
         /// <summary>
-        /// This SQL returns all invoices with: Num 5000, and Date 4/13/2018
+        /// This SQL returns all invoices with: A specific number and date
         /// </summary>
+        /// <param name="InvoiceNum"></param>
+        /// <param name="InvoiceDate"></param>
         /// <returns></returns>
-        public string GetInvoiceNum5000AndDate4_13_2018()
+        /// <exception cref="Exception"></exception>
+        public static string GetInvoiceFromNumAndDate(int InvoiceNum, string InvoiceDate)
         {
             try
             {
-                //GetInvoiceNum5000AndDate4_13_2018()
-                //  SELECT* FROM Invoices WHERE InvoiceNum = 5000 AND InvoiceDate = #4/13/2018#
-                //Note: Query works but doesn't return anything due to no invoices existing with that information
-                string sSQL = "SELECT* FROM Invoices WHERE InvoiceNum = 5000 AND InvoiceDate = #4/13/2018#";
+                string sSQL = "SELECT * FROM Invoices WHERE InvoiceNum = " + InvoiceNum + " AND InvoiceDate = #" + InvoiceDate + "#";
                 return sSQL;
             }
             catch (Exception ex)
@@ -73,17 +67,18 @@ namespace GroupProject.Search
             }
         }
         /// <summary>
-        /// This SQL returns all invoices with: Num 5000, Date 4/13/2018, and Cost 120
+        /// This SQL returns all invoices with: A specific number, date, and cost
         /// </summary>
+        /// <param name="InvoiceNum"></param>
+        /// <param name="Date"></param>
+        /// <param name="TotalCost"></param>
         /// <returns></returns>
-        public string GetInvoiceNum5000AndDate4_13_2018AndCost120()
+        /// <exception cref="Exception"></exception>
+        public static string GetInvoiceFromNumDateAndCost(string InvoiceNum, string Date, string TotalCost)
         {
             try
             {
-                //GetInvoiceNum5000AndDate4_13_2018AndCost120()
-                //  SELECT * FROM Invoices WHERE InvoiceNum = 5000 AND InvoiceDate = #4/13/2018# AND TotalCost = 120
-                //Note: Query works but doesn't return anything due to no invoices existing with that information
-                string sSQL = "SELECT * FROM Invoices WHERE InvoiceNum = 5000 AND InvoiceDate = #4/13/2018# AND TotalCost = 120";
+                string sSQL = "SELECT * FROM Invoices WHERE InvoiceNum = " + InvoiceNum + " AND InvoiceDate = #" + Date + "# AND TotalCost = " + TotalCost + "";
                 return sSQL;
             }
             catch (Exception ex)
@@ -92,17 +87,16 @@ namespace GroupProject.Search
             }
         }
         /// <summary>
-        /// This SQL returns all invoices with: Cost 1200
+        /// This SQL returns all invoices with: A specific cost
         /// </summary>
+        /// <param name="TotalCost"></param>
         /// <returns></returns>
-        public string GetInvoiceCost1200()
+        /// <exception cref="Exception"></exception>
+        public static string GetInvoiceFromCost(string TotalCost)
         {
             try
             {
-                //GetInvoiceCost1200()
-                //  SELECT * FROM Invoices WHERE TotalCost = 1200
-                //Note: Query works but doesn't return anything due to no invoices existing with that information
-                string sSQL = "SELECT * FROM Invoices WHERE TotalCost = 1200";
+                string sSQL = "SELECT * FROM Invoices WHERE TotalCost = " + TotalCost + "";
                 return sSQL;
             }
             catch (Exception ex)
@@ -111,17 +105,17 @@ namespace GroupProject.Search
             }
         }
         /// <summary>
-        /// This SQL returns all invoices with: Cost 1300, and Date 4/13/2018
+        /// This SQL returns all invoices with: A specific number and cost
         /// </summary>
+        /// <param name="InvoiceNum"></param>
+        /// <param name="TotalCost"></param>
         /// <returns></returns>
-        public string GetInvoiceCost1300AndDate4_13_2018()
+        /// <exception cref="Exception"></exception>
+        public static string GetInvoiceFromNumAndCost(string InvoiceNum, string TotalCost)
         {
             try
             {
-                //GetInvoiceCost1300AndDate4_13_2018()
-                //  SELECT * FROM Invoices WHERE TotalCost = 1300 and InvoiceDate = #4/13/2018#
-                //Note: Query works but doesn't return anything due to no invoices existing with that information
-                string sSQL = "SELECT * FROM Invoices WHERE TotalCost = 1300 and InvoiceDate = #4/13/2018#";
+                string sSQL = "SELECT * FROM Invoices WHERE InvoiceNum = " + InvoiceNum + " AND TotalCost = " + TotalCost + "";
                 return sSQL;
             }
             catch (Exception ex)
@@ -130,17 +124,35 @@ namespace GroupProject.Search
             }
         }
         /// <summary>
-        /// This SQL returns all invoices with: Date 4/13/2018
+        /// This SQL returns all invoices with: A specific cost and date
         /// </summary>
+        /// <param name="TotalCost"></param>
+        /// <param name="Date"></param>
         /// <returns></returns>
-        public string GetInvoiceDate4_13_2018()
+        /// <exception cref="Exception"></exception>
+        public static string GetInvoiceFromCostAndDate(string TotalCost, string Date)
         {
             try
             {
-                //GetInvoiceDate4_13_2018()
-                //  SELECT * FROM Invoices WHERE InvoiceDate = #4/13/2018#
-                //Note: Query works but doesn't return anything due to no invoices existing with that information
-                string sSQL = "SELECT * FROM Invoices WHERE InvoiceDate = #4/13/2018#";
+                string sSQL = "SELECT * FROM Invoices WHERE TotalCost = " + TotalCost + " AND InvoiceDate = #" + Date + "#";
+                return sSQL;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(MethodInfo.GetCurrentMethod().DeclaringType.Name + "." + MethodInfo.GetCurrentMethod().Name + " -> " + ex.Message);
+            }
+        }
+        /// <summary>
+        /// This SQL returns all invoices with: A specific date
+        /// </summary>
+        /// <param name="Date"></param>
+        /// <returns></returns>
+        /// <exception cref="Exception"></exception>
+        public static string GetInvoiceFromDate(string Date)
+        {
+            try
+            {
+                string sSQL = "SELECT * FROM Invoices WHERE InvoiceDate = #" + Date + "#";
                 return sSQL;
             }
             catch (Exception ex)
@@ -151,13 +163,13 @@ namespace GroupProject.Search
         /// <summary>
         /// This SQL returns all invoices with: Distinct Num
         /// </summary>
+        /// <param name="InvoiceNum"></param>
         /// <returns></returns>
-        public string GetDistinctInvoiceNum()
+        /// <exception cref="Exception"></exception>
+        public static string GetDistinctInvoiceNum()
         {
             try
             {
-                //GetDistinctInvoiceNum()
-                //  SELECT DISTINCT(InvoiceNum) From Invoices order by InvoiceNum
                 string sSQL = "SELECT DISTINCT(InvoiceNum) From Invoices order by InvoiceNum";
                 return sSQL;
             }
@@ -169,13 +181,13 @@ namespace GroupProject.Search
         /// <summary>
         /// This SQL returns all invoices with: Distinct Date
         /// </summary>
+        /// <param name="Date"></param>
         /// <returns></returns>
-        public string GetDistinctInvoiceDate()
+        /// <exception cref="Exception"></exception>
+        public static string GetDistinctInvoiceDate()
         {
             try
             {
-                //GetDistinctInvoiceDate()
-                //  SELECT DISTINCT(InvoiceDate) From Invoices order by InvoiceDate
                 string sSQL = "SELECT DISTINCT(InvoiceDate) From Invoices order by InvoiceDate";
                 return sSQL;
             }
@@ -187,13 +199,13 @@ namespace GroupProject.Search
         /// <summary>
         /// This SQL returns all invoices with: Distinct Cost
         /// </summary>
+        /// <param name="Cost"></param>
         /// <returns></returns>
-        public string GetDistinctInvoiceCost()
+        /// <exception cref="Exception"></exception>
+        public static string GetDistinctInvoiceCost()
         {
             try
             {
-                //GetDistinctInvoiceCost()
-                //  SELECT DISTINCT(TotalCost) From Invoices order by TotalCost
                 string sSQL = "SELECT DISTINCT(TotalCost) From Invoices order by TotalCost";
                 return sSQL;
             }

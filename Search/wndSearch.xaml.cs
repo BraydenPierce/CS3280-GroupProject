@@ -1,4 +1,5 @@
-﻿using GroupProject.Main;
+﻿using GroupProject.Common;
+using GroupProject.Main;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,20 +22,36 @@ namespace GroupProject.Search
     /// </summary>
     public partial class wndSearch : Window
     {
-        //sSelectedInvoiceID - Holds the invoice ID if the user selected one, and zero if no invoice is selected
-        //Data will be passed around with the following property that the main window can access:
-            //SelectedInvoiceID - Property main window can access to get the selected invoice ID
-
-        #region Properties
+        #region Properties/Variables
         /// <summary>
         /// Public property for the sSelectedInvoiceID
         /// </summary>
-        public string SelectedInvoiceID {  get; set; }
+        public string SelectedInvoiceID { get; set; } = "0";
+        /// <summary>
+        /// Local variable for the clsSearchLogic class
+        /// </summary>
+        clsSearchLogic clsSearchLogic = new clsSearchLogic();
         #endregion
 
         public wndSearch()
         {
-            InitializeComponent();
+            try
+            {
+                InitializeComponent();
+                //Assigning all the combo boxes
+                //Had to do a round-about way to display the invoice numbers due to not being able to override the ToString() method for Invoice number, date, and cost
+                invoiceNumberCB.ItemsSource = clsSearchLogic.getDistinctInvoiceNumber();
+                invoiceNumberCB.DisplayMemberPath = "DisplayInvoiceNumber";
+                invoiceDateCB.ItemsSource = clsSearchLogic.getDistinctInvoiceDates();
+                invoiceDateCB.DisplayMemberPath = "DisplayInvoiceDate";
+                totalCostsCB.ItemsSource = clsSearchLogic.getDistinctInvoiceCosts();
+                totalCostsCB.DisplayMemberPath = "DisplayInvoiceCost";
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(MethodInfo.GetCurrentMethod().DeclaringType.Name + "." + MethodInfo.GetCurrentMethod().Name + " -> " + ex.Message);
+            }
         }
 
         private void clearFilterBTN_Click(object sender, RoutedEventArgs e)
@@ -58,6 +75,16 @@ namespace GroupProject.Search
         {
             try
             {
+                //Assigning SelectedInvoiceID to the correct number
+                if (invoiceNumberCB.SelectedItem is clsInvoice selectedInvoice)
+                {
+                    SelectedInvoiceID = selectedInvoice.sInvoiceNumber;
+                }
+                else
+                {
+                    SelectedInvoiceID = "0";
+                }
+
                 //Hide current opened window
                 this.Hide();
                 //Show the main window
@@ -69,8 +96,14 @@ namespace GroupProject.Search
                 throw new Exception(MethodInfo.GetCurrentMethod().DeclaringType.Name + "." + MethodInfo.GetCurrentMethod().Name + " -> " + ex.Message);
             }
 
-            //When SelectInvoiceBTN is pressed the invoice number will be passed to main as SelectedInvoiceID (see comments at top)
             //When SelectInvoiceBTN is pressed we will update/refresh the form main when the window is closed
+
+            /*
+                Note: The main window can access SelectedInvoiceID with the following code:
+                        wnd.SelectedInvoiceID
+                For example, if you wanted to show a dialog box with the SelectedInvoiceID you can do this IN wndMain.xaml.cs:
+                                MessageBox.Show($"You selected Invoice ID: {wnd.SelectedInvoiceID}", "Invoice Selected", MessageBoxButton.OK, MessageBoxImage.Information);}
+            */
         }
     }
 }
