@@ -60,7 +60,6 @@ namespace GroupProject.Items
         {
             try
             {
-                // TODO: set dynamic values
                 string sSQL = "Update ItemDesc Set ItemDesc = '" + itemDesc + "', Cost = " + cost + " where ItemCode = '" + itemCode + "'";
                 return sSQL;
             }
@@ -83,7 +82,6 @@ namespace GroupProject.Items
         {
             try
             {
-                // TODO: set dynamic values
                 string sSQL = "Insert into ItemDesc (ItemCode, ItemDesc, Cost) Values ('" + itemCode + "', '" + itemDesc + "', " + cost + ")";
                 return sSQL;
             }
@@ -104,7 +102,6 @@ namespace GroupProject.Items
         {
             try
             {
-                // TODO: set dynamic values
                 string sSQL = "Delete from ItemDesc Where ItemCode = '" + itemCode + "'";
                 return sSQL;
             }
