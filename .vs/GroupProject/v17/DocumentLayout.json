@@ -3,28 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Brayd\\Box\\2025-Spring\\cs3280-Object_Oriented_Windows_using_C#\\CS3280-GroupProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0D8B2C21-6B9E-4117-9457-CCDB35D8919B}|GroupProject.csproj|c:\\users\\brayd\\box\\2025-spring\\cs3280-object_oriented_windows_using_c#\\cs3280-groupproject\\items\\wnditems.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{0D8B2C21-6B9E-4117-9457-CCDB35D8919B}|GroupProject.csproj|solutionrelative:items\\wnditems.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{0D8B2C21-6B9E-4117-9457-CCDB35D8919B}|GroupProject.csproj|c:\\users\\brayd\\box\\2025-spring\\cs3280-object_oriented_windows_using_c#\\cs3280-groupproject\\common\\clsitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D8B2C21-6B9E-4117-9457-CCDB35D8919B}|GroupProject.csproj|solutionrelative:common\\clsitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0D8B2C21-6B9E-4117-9457-CCDB35D8919B}|GroupProject.csproj|c:\\users\\brayd\\box\\2025-spring\\cs3280-object_oriented_windows_using_c#\\cs3280-groupproject\\items\\clsitemslogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0D8B2C21-6B9E-4117-9457-CCDB35D8919B}|GroupProject.csproj|C:\\Users\\Brayd\\Box\\2025-Spring\\cs3280-Object_Oriented_Windows_using_C#\\CS3280-GroupProject\\items\\clsitemslogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0D8B2C21-6B9E-4117-9457-CCDB35D8919B}|GroupProject.csproj|solutionrelative:items\\clsitemslogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0D8B2C21-6B9E-4117-9457-CCDB35D8919B}|GroupProject.csproj|c:\\users\\brayd\\box\\2025-spring\\cs3280-object_oriented_windows_using_c#\\cs3280-groupproject\\items\\clsitemssql.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0D8B2C21-6B9E-4117-9457-CCDB35D8919B}|GroupProject.csproj|C:\\Users\\Brayd\\Box\\2025-Spring\\cs3280-Object_Oriented_Windows_using_C#\\CS3280-GroupProject\\items\\clsitemssql.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0D8B2C21-6B9E-4117-9457-CCDB35D8919B}|GroupProject.csproj|solutionrelative:items\\clsitemssql.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0D8B2C21-6B9E-4117-9457-CCDB35D8919B}|GroupProject.csproj|c:\\users\\brayd\\box\\2025-spring\\cs3280-object_oriented_windows_using_c#\\cs3280-groupproject\\main\\clsmainsql.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0D8B2C21-6B9E-4117-9457-CCDB35D8919B}|GroupProject.csproj|solutionrelative:main\\clsmainsql.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0D8B2C21-6B9E-4117-9457-CCDB35D8919B}|GroupProject.csproj|c:\\users\\brayd\\box\\2025-spring\\cs3280-object_oriented_windows_using_c#\\cs3280-groupproject\\main\\clsmainlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0D8B2C21-6B9E-4117-9457-CCDB35D8919B}|GroupProject.csproj|solutionrelative:main\\clsmainlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0D8B2C21-6B9E-4117-9457-CCDB35D8919B}|GroupProject.csproj|c:\\users\\brayd\\box\\2025-spring\\cs3280-object_oriented_windows_using_c#\\cs3280-groupproject\\search\\clssearchsql.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0D8B2C21-6B9E-4117-9457-CCDB35D8919B}|GroupProject.csproj|solutionrelative:search\\clssearchsql.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0D8B2C21-6B9E-4117-9457-CCDB35D8919B}|GroupProject.csproj|C:\\Users\\Brayd\\Box\\2025-Spring\\cs3280-Object_Oriented_Windows_using_C#\\CS3280-GroupProject\\items\\wnditems.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{0D8B2C21-6B9E-4117-9457-CCDB35D8919B}|GroupProject.csproj|solutionrelative:items\\wnditems.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -55,14 +47,26 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "clsItem.cs",
+              "DocumentMoniker": "C:\\Users\\Brayd\\Box\\2025-Spring\\cs3280-Object_Oriented_Windows_using_C#\\CS3280-GroupProject\\Common\\clsItem.cs",
+              "RelativeDocumentMoniker": "Common\\clsItem.cs",
+              "ToolTip": "C:\\Users\\Brayd\\Box\\2025-Spring\\cs3280-Object_Oriented_Windows_using_C#\\CS3280-GroupProject\\Common\\clsItem.cs",
+              "RelativeToolTip": "Common\\clsItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T16:03:56.699Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "wndItems.xaml",
               "DocumentMoniker": "C:\\Users\\Brayd\\Box\\2025-Spring\\cs3280-Object_Oriented_Windows_using_C#\\CS3280-GroupProject\\Items\\wndItems.xaml",
               "RelativeDocumentMoniker": "Items\\wndItems.xaml",
               "ToolTip": "C:\\Users\\Brayd\\Box\\2025-Spring\\cs3280-Object_Oriented_Windows_using_C#\\CS3280-GroupProject\\Items\\wndItems.xaml",
               "RelativeToolTip": "Items\\wndItems.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-30T03:01:12.296Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-30T03:01:12.296Z"
             },
             {
               "$type": "Document",
@@ -72,49 +76,9 @@
               "RelativeDocumentMoniker": "Items\\clsItemsLogic.cs",
               "ToolTip": "C:\\Users\\Brayd\\Box\\2025-Spring\\cs3280-Object_Oriented_Windows_using_C#\\CS3280-GroupProject\\Items\\clsItemsLogic.cs",
               "RelativeToolTip": "Items\\clsItemsLogic.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-30T03:01:10.325Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "clsMainLogic.cs",
-              "DocumentMoniker": "C:\\Users\\Brayd\\Box\\2025-Spring\\cs3280-Object_Oriented_Windows_using_C#\\CS3280-GroupProject\\Main\\clsMainLogic.cs",
-              "RelativeDocumentMoniker": "Main\\clsMainLogic.cs",
-              "ToolTip": "C:\\Users\\Brayd\\Box\\2025-Spring\\cs3280-Object_Oriented_Windows_using_C#\\CS3280-GroupProject\\Main\\clsMainLogic.cs",
-              "RelativeToolTip": "Main\\clsMainLogic.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-30T02:59:43.718Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "clsMainSQL.cs",
-              "DocumentMoniker": "C:\\Users\\Brayd\\Box\\2025-Spring\\cs3280-Object_Oriented_Windows_using_C#\\CS3280-GroupProject\\Main\\clsMainSQL.cs",
-              "RelativeDocumentMoniker": "Main\\clsMainSQL.cs",
-              "ToolTip": "C:\\Users\\Brayd\\Box\\2025-Spring\\cs3280-Object_Oriented_Windows_using_C#\\CS3280-GroupProject\\Main\\clsMainSQL.cs",
-              "RelativeToolTip": "Main\\clsMainSQL.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-30T02:59:40.59Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "clsSearchSQL.cs",
-              "DocumentMoniker": "C:\\Users\\Brayd\\Box\\2025-Spring\\cs3280-Object_Oriented_Windows_using_C#\\CS3280-GroupProject\\Search\\clsSearchSQL.cs",
-              "RelativeDocumentMoniker": "Search\\clsSearchSQL.cs",
-              "ToolTip": "C:\\Users\\Brayd\\Box\\2025-Spring\\cs3280-Object_Oriented_Windows_using_C#\\CS3280-GroupProject\\Search\\clsSearchSQL.cs",
-              "RelativeToolTip": "Search\\clsSearchSQL.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-30T02:59:37.176Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-30T03:01:10.325Z"
             },
             {
               "$type": "Document",
@@ -124,10 +88,9 @@
               "RelativeDocumentMoniker": "Items\\clsItemsSQL.cs",
               "ToolTip": "C:\\Users\\Brayd\\Box\\2025-Spring\\cs3280-Object_Oriented_Windows_using_C#\\CS3280-GroupProject\\Items\\clsItemsSQL.cs",
               "RelativeToolTip": "Items\\clsItemsSQL.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGEAAAA7AAAAAAAAAA==",
+              "ViewState": "AgIAACQAAAAAAAAAAAA1wBIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-30T01:49:38.181Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-30T01:49:38.181Z"
             }
           ]
         }

@@ -48,6 +48,5 @@
             </StackPanel>
         </Grid>
         <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}" Grid.RowSpan="2" Grid.Column="1" Margin="15"/>
-
     </Grid>
 </Window>
