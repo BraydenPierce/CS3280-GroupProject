@@ -22,10 +22,24 @@ namespace GroupProject.Items
         public wndItems()
         {
             InitializeComponent();
+            clsItemsLogic itemsLogic = new clsItemsLogic();
+            dgItems.ItemsSource = itemsLogic.GetItems();
         }
 
-        //bool bHasItemsBeenChanged;     //Set to true when an item has been added/edited/deleted.   Used by main window to know if needs to refresh items list
-        //bool HasItemsBeenChanged;     //Property
+        /// <summary>
+        /// Set to true when an item has been added/edited/deleted. Used by main window to know if needs to refresh items list
+        /// </summary>
+        private bool bHasItemsBeenChanged = false;
+
+        /// <summary>
+        /// get/set for bHasItemsBeenChanged. Set to true when an item has been added/edited/deleted. 
+        /// Used by main window to know if needs to refresh items list
+        /// </summary>
+        public bool HasItemsBeenChanged
+        {
+            get { return bHasItemsBeenChanged; }
+            set { bHasItemsBeenChanged = value; }
+        }
 
         /// <summary>
         /// Click handler for the "Add Item" button.

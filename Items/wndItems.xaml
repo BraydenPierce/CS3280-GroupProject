@@ -47,6 +47,6 @@
                 <Button x:Name="btnDeleteItem" Content="Delete Item" Margin="15" Height="40" Click="btnDeleteItem_Click"/>
             </StackPanel>
         </Grid>
-        <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}" Grid.RowSpan="2" Grid.Column="1" Margin="15"/>
+        <DataGrid x:Name="dgItems" Grid.RowSpan="2" Grid.Column="1" Margin="15"/>
     </Grid>
 </Window>
