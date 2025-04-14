@@ -69,5 +69,36 @@ namespace GroupProject.Items
                                     MethodInfo.GetCurrentMethod().Name + " -> " + ex.Message);
             }
         }
+
+        /// <summary>
+        /// Deletes an item from Invoice.mdb
+        /// </summary>
+        /// <param name="itemCode"></param>
+        public void DeleteItem(string itemCode)
+        {
+            db.ExecuteNonQuery(clsItemsSQL.GetDeleteItem(itemCode));
+        }
+
+        /// <summary>
+        /// Updates an item from Invoice.mdb
+        /// </summary>
+        /// <param name="itemDesc"></param>
+        /// <param name="itemCode"></param>
+        /// <param name="cost"></param>
+        public void UpdateItem(string itemDesc, string itemCode, string cost)
+        {
+            db.ExecuteNonQuery(clsItemsSQL.GetUpdateItem(itemDesc, cost, itemCode));
+        }
+
+        /// <summary>
+        /// Adds an item to Invoice.mdb
+        /// </summary>
+        /// <param name="itemDesc"></param>
+        /// <param name="cost"></param>
+        /// <param name="itemCode"></param>
+        public void AddItem(string itemDesc, string cost, string itemCode)
+        {
+            db.ExecuteNonQuery(clsItemsSQL.GetInsertItem(itemDesc, cost, itemCode));
+        }
     }
 }

@@ -42,7 +42,8 @@
         </Grid>
         <Grid Grid.Row="1">
             <StackPanel Orientation="Vertical">
-                <Button x:Name="btnAddItem" Content="Add Item" Margin="15" Height="40" Click="btnAddItem_Click" IsEnabled="False"/>
+                <Label x:Name="lblStatus" Content="" Foreground="Red" FontWeight="Bold" HorizontalAlignment="Center"/>
+                <Button x:Name="btnAddItem" Content="Add Item" Margin="15" Height="40" Click="btnAddItem_Click"/>
                 <Button x:Name="btnEditItem" Content="Edit Item" Margin="15" Height="40" Click="btnEditItem_Click" IsEnabled="False"/>
                 <Button x:Name="btnDeleteItem" Content="Delete Item" Margin="15" Height="40" Click="btnDeleteItem_Click" IsEnabled="False"/>
             </StackPanel>

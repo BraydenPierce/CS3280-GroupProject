@@ -13,6 +13,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using GroupProject.Common;
 
 namespace GroupProject.Items
 {
@@ -21,10 +22,13 @@ namespace GroupProject.Items
     /// </summary>
     public partial class wndItems : Window
     {
+        /// <summary>
+        /// clsItemsLogic instance to use Logic class
+        /// </summary>
+        clsItemsLogic itemsLogic = new clsItemsLogic();
         public wndItems()
         {
             InitializeComponent();
-            clsItemsLogic itemsLogic = new clsItemsLogic();
             dgItems.ItemsSource = itemsLogic.GetItems();
         }
 
@@ -32,7 +36,6 @@ namespace GroupProject.Items
         /// Set to true when an item has been added/edited/deleted. Used by main window to know if needs to refresh items list
         /// </summary>
         private bool bHasItemsBeenChanged = false;
-
         /// <summary>
         /// get/set for bHasItemsBeenChanged. Set to true when an item has been added/edited/deleted. 
         /// Used by main window to know if needs to refresh items list
@@ -47,14 +50,14 @@ namespace GroupProject.Items
         {
             try
             {
-                //TODO: Fix, this code doesnt work
-                if (dgItems.SelectedItem is DataRowView selectedRow)
+                //INSTRUCTOR NOTE: Cast into a clsItem, that is why you created the clsItem class and
+                //used a List<clsItem> objects to bind to the DataGrid to display items
+                if (dgItems.SelectedItem is clsItem clsMyItem)
                 {
-                    tbCode.Text = selectedRow["ItemCode"].ToString();
-                    tbCost.Text = selectedRow["Cost"].ToString();
-                    tbDescription.Text = selectedRow["ItemDesc"].ToString();
+                    tbCode.Text = clsMyItem.ItemCode;
+                    tbCost.Text = clsMyItem.Cost.ToString();
+                    tbDescription.Text = clsMyItem.ItemDesc;
                 }
-
                 btnEditItem.IsEnabled = true;
                 btnDeleteItem.IsEnabled = true;
             }
@@ -74,7 +77,20 @@ namespace GroupProject.Items
         {
             try
             {
-                return;
+                if (tbCode.Text != "" && tbCost.Text != "" && tbDescription.Text != "")
+                {
+                    // Call the AddItem method from clsItemsLogic method, which then calls clsItemsSQL method
+                    // Used with currently entered textbox values.
+                    itemsLogic.AddItem(tbDescription.Text, tbCost.Text, tbCode.Text);
+
+                    // Item as been added
+                    bHasItemsBeenChanged = true;
+                    Refresh();
+                }
+                else
+                {
+                    lblStatus.Content = "Please fill all text boxes";
+                }
             }
             catch (Exception ex)
             {
@@ -92,7 +108,13 @@ namespace GroupProject.Items
         {
             try
             {
-                return;
+                // Call the UpdateItem method from clsItemsLogic method, which then calls clsItemsSQL method
+                // Used with currently entered textbox values.
+                itemsLogic.UpdateItem(tbDescription.Text, tbCode.Text, tbCode.Text);
+
+                // Item has been edited.
+                bHasItemsBeenChanged = true;
+                Refresh();
             }
             catch (Exception ex)
             {
@@ -110,13 +132,34 @@ namespace GroupProject.Items
         {
             try
             {
-                return;
+                // Get currently selecteditem
+                clsItem selectedItem = (clsItem)dgItems.SelectedItem;
+
+                // Call the DeleteItem from clsItemsLogic method, which then calls clsItemsSQL method
+                itemsLogic.DeleteItem(selectedItem.ItemCode);
+
+                // Item has been deleted
+                bHasItemsBeenChanged = true;
+                Refresh();
             }
             catch (Exception ex)
             {
                 HandleError(MethodInfo.GetCurrentMethod().DeclaringType.Name,
                          MethodInfo.GetCurrentMethod().Name, ex.Message);
             }
+        }
+
+        /// <summary>
+        /// Empties textboxes and updates the datagrid
+        /// </summary>
+        private void Refresh()
+        {
+            tbCode.Text = "";
+            tbCost.Text = "";
+            tbDescription.Text = "";
+            lblStatus.Content = "";
+            dgItems.ItemsSource = itemsLogic.GetItems();
+
         }
 
         /// <summary>
