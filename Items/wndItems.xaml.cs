@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -41,6 +43,28 @@ namespace GroupProject.Items
             set { bHasItemsBeenChanged = value; }
         }
 
+        private void dgItems_SelectedCellsChanged(object sender, SelectedCellsChangedEventArgs e)
+        {
+            try
+            {
+                //TODO: Fix, this code doesnt work
+                if (dgItems.SelectedItem is DataRowView selectedRow)
+                {
+                    tbCode.Text = selectedRow["ItemCode"].ToString();
+                    tbCost.Text = selectedRow["Cost"].ToString();
+                    tbDescription.Text = selectedRow["ItemDesc"].ToString();
+                }
+
+                btnEditItem.IsEnabled = true;
+                btnDeleteItem.IsEnabled = true;
+            }
+            catch (Exception ex)
+            {
+                HandleError(MethodInfo.GetCurrentMethod().DeclaringType.Name,
+                         MethodInfo.GetCurrentMethod().Name, ex.Message);
+            }
+        }
+
         /// <summary>
         /// Click handler for the "Add Item" button.
         /// </summary>
@@ -48,7 +72,15 @@ namespace GroupProject.Items
         /// <param name="e"></param>
         private void btnAddItem_Click(object sender, RoutedEventArgs e)
         {
-            return;
+            try
+            {
+                return;
+            }
+            catch (Exception ex)
+            {
+                HandleError(MethodInfo.GetCurrentMethod().DeclaringType.Name,
+                         MethodInfo.GetCurrentMethod().Name, ex.Message);
+            }
         }
 
         /// <summary>
@@ -58,7 +90,15 @@ namespace GroupProject.Items
         /// <param name="e"></param>
         private void btnEditItem_Click(object sender, RoutedEventArgs e)
         {
-            return;
+            try
+            {
+                return;
+            }
+            catch (Exception ex)
+            {
+                HandleError(MethodInfo.GetCurrentMethod().DeclaringType.Name,
+                         MethodInfo.GetCurrentMethod().Name, ex.Message);
+            }
         }
 
         /// <summary>
@@ -68,7 +108,34 @@ namespace GroupProject.Items
         /// <param name="e"></param>
         private void btnDeleteItem_Click(object sender, RoutedEventArgs e)
         {
-            return;
+            try
+            {
+                return;
+            }
+            catch (Exception ex)
+            {
+                HandleError(MethodInfo.GetCurrentMethod().DeclaringType.Name,
+                         MethodInfo.GetCurrentMethod().Name, ex.Message);
+            }
+        }
+
+        /// <summary>
+        /// Top level error handler
+        /// </summary>
+        /// <param name="sClass"></param>
+        /// <param name="sMethod"></param>
+        /// <param name="sMessage"></param>
+        private void HandleError(string sClass, string sMethod, string sMessage)
+        {
+            try
+            {
+                MessageBox.Show(sClass + "." + sMethod + " -> " + sMessage);
+            }
+            catch (Exception ex)
+            {
+                System.IO.File.AppendAllText("C:\\Error.txt", Environment.NewLine +
+                                            "HandleError Exception: " + ex.Message);
+            }
         }
     }
 }
