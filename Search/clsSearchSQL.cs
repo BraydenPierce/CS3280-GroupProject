@@ -35,11 +35,11 @@ namespace GroupProject.Search
         /// <param name="integer"></param>
         /// <returns></returns>
         /// <exception cref="Exception"></exception>
-        public static string GetInvoiceFromNum(int InvoiceNum, int integer)
+        public static string GetInvoiceFromNum(string integer)
         {
             try
             {
-                string sSQL = "SELECT * FROM Invoices WHERE " + InvoiceNum + " = " + integer + "";
+                string sSQL = "SELECT * FROM Invoices WHERE InvoiceNum = " + integer + "";
                 return sSQL;
             }
             catch (Exception ex)
@@ -54,7 +54,7 @@ namespace GroupProject.Search
         /// <param name="InvoiceDate"></param>
         /// <returns></returns>
         /// <exception cref="Exception"></exception>
-        public static string GetInvoiceFromNumAndDate(int InvoiceNum, string InvoiceDate)
+        public static string GetInvoiceFromNumAndDate(string InvoiceNum, string InvoiceDate)
         {
             try
             {

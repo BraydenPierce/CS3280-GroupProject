@@ -124,9 +124,169 @@ namespace GroupProject.Search
         //Write a statement to build an SQL statement based on the properties passed in
         public List<clsInvoice> GetInvoices(string InvoiceNumber, string InvoiceDate, string TotalCost)
         {
+            try    //InvoiceNumber, InvoiceDate, and TotalCost will come in as null if nothing is selected
+            {
+                //For the following cases I am determining what was passed in and what SQL to execute
+
+                clsDataAccess db = new clsDataAccess();
+                DataSet ds = new DataSet();
+                int iRet = 0;
+                lstInvoices = new List<clsInvoice>();
+                //Case: Num, Date, Cost
+                if (InvoiceNumber != null && InvoiceDate != null && TotalCost != null)
+                {
+                    //Get query string
+                    string query = clsSearchSQL.GetInvoiceFromNumDateAndCost(InvoiceNumber, InvoiceDate, TotalCost); //TODO - TEST
+                    //Execute query
+                    ds = db.ExecuteSQLStatement(query, ref iRet);
+                    //Looping through the data set. For each row we are creating a new clsInvoice, filling it up, and adding a list of invoices
+                    foreach (DataRow dr in ds.Tables[0].Rows)
+                    {
+                        clsInvoice Invoice = new clsInvoice();
+                        Invoice.sInvoiceNumber = dr[0].ToString();
+                        Invoice.sInvoiceDate = Convert.ToDateTime(dr[1]).ToString("MM/dd/yyyy"); //Format date
+                        Invoice.sInvoiceCost = dr[2].ToString();
+                        lstInvoices.Add(Invoice);
+                    }
+                }
+                //Case: Num, Date
+                if (InvoiceNumber != null && InvoiceDate != null && TotalCost == null)
+                {
+                    //Get query string
+                    string query = clsSearchSQL.GetInvoiceFromNumAndDate(InvoiceNumber, InvoiceDate); //TODO - TEST
+                    //Execute query
+                    ds = db.ExecuteSQLStatement(query, ref iRet);
+                    //Looping through the data set. For each row we are creating a new clsInvoice, filling it up, and adding a list of invoices
+                    foreach (DataRow dr in ds.Tables[0].Rows)
+                    {
+                        clsInvoice Invoice = new clsInvoice();
+                        Invoice.sInvoiceNumber = dr[0].ToString();
+                        Invoice.sInvoiceDate = Convert.ToDateTime(dr[1]).ToString("MM/dd/yyyy"); //Format date
+                        Invoice.sInvoiceCost = dr[2].ToString();
+                        lstInvoices.Add(Invoice);
+                    }
+                }
+                //Case: Num, Cost
+                if (InvoiceNumber != null && TotalCost != null && InvoiceDate == null)
+                {
+                    //Get query string
+                    string query = clsSearchSQL.GetInvoiceFromNumAndCost(InvoiceNumber, TotalCost); //TODO - TEST
+                    //Execute query
+                    ds = db.ExecuteSQLStatement(query, ref iRet);
+                    //Looping through the data set. For each row we are creating a new clsInvoice, filling it up, and adding a list of invoices
+                    foreach (DataRow dr in ds.Tables[0].Rows)
+                    {
+                        clsInvoice Invoice = new clsInvoice();
+                        Invoice.sInvoiceNumber = dr[0].ToString();
+                        Invoice.sInvoiceDate = Convert.ToDateTime(dr[1]).ToString("MM/dd/yyyy"); //Format date
+                        Invoice.sInvoiceCost = dr[2].ToString();
+                        lstInvoices.Add(Invoice);
+                    }
+                }
+                //Case: Date, Cost
+                if (InvoiceDate != null && TotalCost != null && InvoiceNumber == null)
+                {
+                    //Get query string
+                    string query = clsSearchSQL.GetInvoiceFromCostAndDate(TotalCost, InvoiceDate); //TODO - TEST
+                    //Execute query
+                    ds = db.ExecuteSQLStatement(query, ref iRet);
+                    //Looping through the data set. For each row we are creating a new clsInvoice, filling it up, and adding a list of invoices
+                    foreach (DataRow dr in ds.Tables[0].Rows)
+                    {
+                        clsInvoice Invoice = new clsInvoice();
+                        Invoice.sInvoiceNumber = dr[0].ToString();
+                        Invoice.sInvoiceDate = Convert.ToDateTime(dr[1]).ToString("MM/dd/yyyy"); //Format date
+                        Invoice.sInvoiceCost = dr[2].ToString();
+                        lstInvoices.Add(Invoice);
+                    }
+                }
+                //Case: Num
+                if (InvoiceNumber != null && InvoiceDate == null && TotalCost == null)
+                {
+                    //Get query string
+                    string query = clsSearchSQL.GetInvoiceFromNum(InvoiceNumber);
+                    //Execute query
+                    ds = db.ExecuteSQLStatement(query, ref iRet);
+                    //Looping through the data set. For each row we are creating a new clsInvoice, filling it up, and adding a list of invoices
+                    foreach (DataRow dr in ds.Tables[0].Rows)
+                    {
+                        clsInvoice Invoice = new clsInvoice();
+                        Invoice.sInvoiceNumber = dr[0].ToString();
+                        Invoice.sInvoiceDate = Convert.ToDateTime(dr[1]).ToString("MM/dd/yyyy"); //Format date
+                        Invoice.sInvoiceCost = dr[2].ToString();
+                        lstInvoices.Add(Invoice);
+                    }
+                }
+                //Case: Date
+                if (InvoiceDate != null && InvoiceNumber == null && TotalCost == null)
+                {
+                    //Get query string
+                    string query = clsSearchSQL.GetInvoiceFromDate(InvoiceDate); //TODO
+                    //Execute query
+                    ds = db.ExecuteSQLStatement(query, ref iRet);
+                    //Looping through the data set. For each row we are creating a new clsInvoice, filling it up, and adding a list of invoices
+                    foreach (DataRow dr in ds.Tables[0].Rows)
+                    {
+                        clsInvoice Invoice = new clsInvoice();
+                        Invoice.sInvoiceNumber = dr[0].ToString();
+                        Invoice.sInvoiceDate = Convert.ToDateTime(dr[1]).ToString("MM/dd/yyyy"); //Format date
+                        Invoice.sInvoiceCost = dr[2].ToString();
+                        lstInvoices.Add(Invoice);
+                    }
+                }
+                //Case: Cost
+                if (TotalCost != null && InvoiceNumber == null && InvoiceDate == null)
+                {
+                    //Get query string
+                    string query = clsSearchSQL.GetInvoiceFromCost(TotalCost); //TODO - TEST
+                    //Execute query
+                    ds = db.ExecuteSQLStatement(query, ref iRet);
+                    //Looping through the data set. For each row we are creating a new clsInvoice, filling it up, and adding a list of invoices
+                    foreach (DataRow dr in ds.Tables[0].Rows)
+                    {
+                        clsInvoice Invoice = new clsInvoice();
+                        Invoice.sInvoiceNumber = dr[0].ToString();
+                        Invoice.sInvoiceDate = Convert.ToDateTime(dr[1]).ToString("MM/dd/yyyy"); //Format date
+                        Invoice.sInvoiceCost = dr[2].ToString();
+                        lstInvoices.Add(Invoice);
+                    }
+                }
+                return lstInvoices;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(MethodInfo.GetCurrentMethod().DeclaringType.Name + "." + MethodInfo.GetCurrentMethod().Name + " -> " + ex.Message);
+            }
+        }
+        /// <summary>
+        /// Getting all the invoices to pass into the Data Grid
+        /// </summary>
+        /// <returns></returns>
+        /// <exception cref="Exception"></exception>
+        public List<clsInvoice> GetAllInvoices()
+        {
             try
             {
-                //Need to determine what was passed in and what SQL statement to execute
+                clsDataAccess db = new clsDataAccess();
+                DataSet ds = new DataSet();
+                int iRet = 0;
+                lstInvoices = new List<clsInvoice>();
+
+                //Get query string
+                string query = clsSearchSQL.GetInvoices();
+                //Execute query
+                ds = db.ExecuteSQLStatement(query, ref iRet);
+
+                //Looping through the data set. For each row we are creating a new clsInvoice, filling it up, and adding a list of invoices
+                foreach (DataRow dr in ds.Tables[0].Rows)
+                {
+                    clsInvoice Invoice = new clsInvoice();
+                    Invoice.sInvoiceNumber = dr[0].ToString();
+                    Invoice.sInvoiceDate = Convert.ToDateTime(dr[1]).ToString("MM/dd/yyyy"); //Format date
+                    Invoice.sInvoiceCost = dr[2].ToString();
+                    lstInvoices.Add(Invoice);
+                }
+
                 return lstInvoices;
             }
             catch (Exception ex)
