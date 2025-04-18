@@ -96,12 +96,7 @@ namespace GroupProject.Search
                 }
 
 
-
-                //Hide current opened window
-                this.Hide();
-                //Show the main window
-                wndMain mainWindow = new wndMain();
-                mainWindow.ShowDialog();
+                this.Close();
             }
             catch (Exception ex)
             {
@@ -171,11 +166,7 @@ namespace GroupProject.Search
                 totalCostsCB.ItemsSource = clsSearchLogic.getDistinctInvoiceCosts();
                 totalCostsCB.DisplayMemberPath = "DisplayInvoiceCost";
 
-                //Hide current opened window
-                this.Hide();
-                //Show the main window
-                wndMain mainWindow = new wndMain();
-                mainWindow.ShowDialog();
+                this.Close();
             }
             catch (Exception ex)
             {
