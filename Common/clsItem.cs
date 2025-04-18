@@ -72,5 +72,14 @@ namespace GroupProject.Common
                                     MethodInfo.GetCurrentMethod().Name + " -> " + ex.Message);
             }
         }
+
+        /// <summary>
+        /// Used to allow for items to be properly displayed in combo box
+        /// </summary>
+        /// <returns>Returns Item name as a string variable</returns>
+        public override string ToString()
+        {
+            return sItemDesc;
+        }
     }
 }

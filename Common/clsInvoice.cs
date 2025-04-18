@@ -24,9 +24,9 @@ namespace GroupProject.Common
         /// </summary>
         public string sInvoiceCost { get; set; }
         /// <summary>
-        /// public variable to hold all the invoices
+        /// public variable to hold all the items
         /// </summary>
-        public List<clsItem> lstInvoices;
+        public List<clsItem> lstItems;
         /// <summary>
         /// Read-only property for displaying the invoice number
         /// </summary>
