@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Schema;
@@ -32,7 +33,14 @@ namespace GroupProject.Main
         /// <returns>currently selected invoice in logic class</returns>
         public clsInvoice ReturnInvoice()
         {
-            return invoice;
+            try
+            {
+                return invoice;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(MethodInfo.GetCurrentMethod().DeclaringType.Name + "." + MethodInfo.GetCurrentMethod().Name + " -> " + ex.Message);
+            }
         }
 
         /// <summary>
@@ -41,18 +49,30 @@ namespace GroupProject.Main
         /// <returns>A list of all items</returns>
         public List<clsItem> GetAllItems()
         {
-            int iRet = 0;
-            DataSet ds = db.ExecuteSQLStatement(clsMainSQL.GetItem(), ref iRet);
-
-            for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+            try
             {
-                clsItem tempItem = new clsItem(ds.Tables[0].Rows[i][0].ToString(), ds.Tables[0].Rows[i][1].ToString(), Convert.ToDouble(ds.Tables[0].Rows[i][2]));
-                Items.Add(tempItem);
+                int iRet = 0;
+
+                ///Gets all current items for purchase into dataset
+                DataSet ds = db.ExecuteSQLStatement(clsMainSQL.GetItem(), ref iRet);
+
+                ///Add current items into Items list
+                for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+                {
+                    clsItem tempItem = new clsItem(ds.Tables[0].Rows[i][0].ToString(), ds.Tables[0].Rows[i][1].ToString(), Convert.ToDouble(ds.Tables[0].Rows[i][2]));
+                    Items.Add(tempItem);
+                }
+
+                ///Sorts items based off of item code for ease of sorting
+                Items.Sort((a, b) => a.ItemCode.CompareTo(b.ItemCode));
+
+                ///Returns list of items
+                return Items;
             }
-
-            Items.Sort((a, b) => a.ItemCode.CompareTo(b.ItemCode));
-
-            return Items;
+            catch (Exception ex)
+            {
+                throw new Exception(MethodInfo.GetCurrentMethod().DeclaringType.Name + "." + MethodInfo.GetCurrentMethod().Name + " -> " + ex.Message);
+            }
         }
 
         /// <summary>
@@ -62,7 +82,14 @@ namespace GroupProject.Main
         /// <returns>Cost converted to a string</returns>
         public string updateItemCost(int idx)
         {
-            return Items[idx].Cost.ToString();
+            try
+            {
+                return Items[idx].Cost.ToString();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(MethodInfo.GetCurrentMethod().DeclaringType.Name + "." + MethodInfo.GetCurrentMethod().Name + " -> " + ex.Message);
+            }
         }
 
         /// <summary>
@@ -71,7 +98,17 @@ namespace GroupProject.Main
         /// <returns>returns total invoice cost</returns>
         public string updateCost()
         {
-            return invoice.sInvoiceCost;
+            try
+            {
+                ///Converts string to double and then back for proper display with cents included
+                double totalCost = Convert.ToDouble(invoice.sInvoiceCost);
+                invoice.sInvoiceCost = totalCost.ToString("F2");
+                return invoice.sInvoiceCost;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(MethodInfo.GetCurrentMethod().DeclaringType.Name + "." + MethodInfo.GetCurrentMethod().Name + " -> " + ex.Message);
+            }
         }
 
         /// <summary>
@@ -79,8 +116,16 @@ namespace GroupProject.Main
         /// </summary>
         public void AddInvoice()
         {
-            invoice = new clsInvoice();
-            invoice.lstItems = new List<clsItem>();
+            try
+            {
+                ///Prepares new invoice object and list of item objects within to be used
+                invoice = new clsInvoice();
+                invoice.lstItems = new List<clsItem>();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(MethodInfo.GetCurrentMethod().DeclaringType.Name + "." + MethodInfo.GetCurrentMethod().Name + " -> " + ex.Message);
+            }
         }
 
         /// <summary>
@@ -90,12 +135,21 @@ namespace GroupProject.Main
         /// <returns>A list of current items on the invoice</returns>
         public void AddItemToInvoice(int idx)
         {
-            if (idx >= 0)
+            try
             {
-                invoice.lstItems.Add(Items[idx]);
-                double totalCost = Convert.ToDouble(invoice.sInvoiceCost);
-                totalCost += Items[idx].Cost;
-                invoice.sInvoiceCost = totalCost.ToString("F2");
+                ///Ensures a valid index has been passed in
+                if (idx >= 0)
+                {
+                    ///Adds item to list of items held by invoice object
+                    invoice.lstItems.Add(Items[idx]);
+                    double totalCost = Convert.ToDouble(invoice.sInvoiceCost);
+                    totalCost += Items[idx].Cost;
+                    invoice.sInvoiceCost = totalCost.ToString("F2");
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(MethodInfo.GetCurrentMethod().DeclaringType.Name + "." + MethodInfo.GetCurrentMethod().Name + " -> " + ex.Message);
             }
         }
 
@@ -105,7 +159,14 @@ namespace GroupProject.Main
         /// <returns>list of clsItems</returns>
         public List<clsItem> ReturnInvoiceItems()
         {
-            return invoice.lstItems;
+            try
+            {
+                return invoice.lstItems;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(MethodInfo.GetCurrentMethod().DeclaringType.Name + "." + MethodInfo.GetCurrentMethod().Name + " -> " + ex.Message);
+            }
         }
 
         /// <summary>
@@ -115,15 +176,29 @@ namespace GroupProject.Main
         /// <returns>current invoice number</returns>
         public int SaveNewInvoice(string date)
         {
-            invoice.sInvoiceDate = date;
-            db.ExecuteNonQuery(clsMainSQL.AddNewInvoice(date, invoice.sInvoiceCost));
-            invoice.sInvoiceNumber = db.ExecuteScalarSQL(clsMainSQL.RetrieveInvoiceNum());
-            for (int i = 0; i < invoice.lstItems.Count; i++)
+            try
             {
-                db.ExecuteNonQuery(clsMainSQL.AddLineItem(invoice.lstItems[i], invoice.sInvoiceNumber, i + 1));
-            }
+                ///Sets invoice date as the date passed in from date picker
+                invoice.sInvoiceDate = date;
 
-            return Convert.ToInt32(invoice.sInvoiceNumber);
+                ///inserts invoice into database
+                db.ExecuteNonQuery(clsMainSQL.AddNewInvoice(date, invoice.sInvoiceCost));
+
+                ///Retrieves autogenerated invoice number
+                invoice.sInvoiceNumber = db.ExecuteScalarSQL(clsMainSQL.RetrieveInvoiceNum());
+
+                ///Adds each item from item list into the database link 
+                for (int i = 0; i < invoice.lstItems.Count; i++)
+                {
+                    db.ExecuteNonQuery(clsMainSQL.AddLineItem(invoice.lstItems[i], invoice.sInvoiceNumber, i + 1));
+                }
+
+                return Convert.ToInt32(invoice.sInvoiceNumber);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(MethodInfo.GetCurrentMethod().DeclaringType.Name + "." + MethodInfo.GetCurrentMethod().Name + " -> " + ex.Message);
+            }
         }
 
         /// <summary>
@@ -132,12 +207,26 @@ namespace GroupProject.Main
         /// <param name="num">Invoice number as passed in by main window</param>
         public void EditInvoice(int num)
         {
-            invoice.sInvoiceNumber = num.ToString();
-            db.ExecuteScalarSQL(clsMainSQL.UpdateInvoiceCost(invoice));
-            db.ExecuteNonQuery(clsMainSQL.RemoveLineItems(Convert.ToInt32(invoice.sInvoiceNumber)));
-            for (int i = 0; i < invoice.lstItems.Count; i++)
+            try
             {
-                db.ExecuteNonQuery(clsMainSQL.AddLineItem(invoice.lstItems[i], invoice.sInvoiceNumber, i + 1));
+                ///Converts passed in invoice number to a string
+                invoice.sInvoiceNumber = num.ToString();
+
+                ///Updates current invoice cost
+                db.ExecuteScalarSQL(clsMainSQL.UpdateInvoiceCost(invoice));
+
+                ///Removes line items from database based off of number
+                db.ExecuteNonQuery(clsMainSQL.RemoveLineItems(Convert.ToInt32(invoice.sInvoiceNumber)));
+
+                ///Adds back in appropriate line items into the database
+                for (int i = 0; i < invoice.lstItems.Count; i++)
+                {
+                    db.ExecuteNonQuery(clsMainSQL.AddLineItem(invoice.lstItems[i], invoice.sInvoiceNumber, i + 1));
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(MethodInfo.GetCurrentMethod().DeclaringType.Name + "." + MethodInfo.GetCurrentMethod().Name + " -> " + ex.Message);
             }
         }
 
@@ -147,10 +236,17 @@ namespace GroupProject.Main
         /// <param name="idx">index of item to be removed from clsItems List</param>
         public void RemoveItem(int idx)
         {
-            double cost = Convert.ToDouble(invoice.sInvoiceCost);
-            cost -= invoice.lstItems[idx].Cost;
-            invoice.sInvoiceCost = cost.ToString("F2");
-            invoice.lstItems.RemoveAt(idx);
+            try
+            {
+                double cost = Convert.ToDouble(invoice.sInvoiceCost);
+                cost -= invoice.lstItems[idx].Cost;
+                invoice.sInvoiceCost = cost.ToString("F2");
+                invoice.lstItems.RemoveAt(idx);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(MethodInfo.GetCurrentMethod().DeclaringType.Name + "." + MethodInfo.GetCurrentMethod().Name + " -> " + ex.Message);
+            }
         }
 
         /// <summary>
@@ -159,24 +255,43 @@ namespace GroupProject.Main
         /// </summary>
         /// <param name="invoiceNum"></param>
         /// <returns>clsInvoice object of retrieved invoice</returns>
-        public clsInvoice GetInvoice(int invoiceNum)
+        public void GetInvoice(int invoiceNum)
         {
-            int iRet = 0;
-            DataSet ds = db.ExecuteSQLStatement(clsMainSQL.GetInvoice(invoiceNum), ref iRet);
-            clsInvoice temp = new clsInvoice();
-            temp.sInvoiceNumber = invoiceNum.ToString();
-            temp.sInvoiceDate = ds.Tables[0].Rows[0][1].ToString();
-            temp.sInvoiceCost = ds.Tables[0].Rows[0][2].ToString();
-            temp.lstItems = new List<clsItem>();
-            ds = db.ExecuteSQLStatement(clsMainSQL.CheckLineItems(invoiceNum), ref iRet);
-
-            for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+            try
             {
-                clsItem tempItem = new clsItem(ds.Tables[0].Rows[i][0].ToString(), ds.Tables[0].Rows[i][1].ToString(), Convert.ToDouble(ds.Tables[0].Rows[i][2]));
-                temp.lstItems.Add(tempItem);
-            }
+                int iRet = 0;
 
-            return temp;
+                ///Retrieves invoice based off of invoice number based in
+                DataSet ds = db.ExecuteSQLStatement(clsMainSQL.GetInvoice(invoiceNum), ref iRet);
+
+                ///Sets up a new invoice object to hold retrieved data
+                clsInvoice temp = new clsInvoice();
+
+                ///Adds all neccessary information into invoice object
+                temp.sInvoiceNumber = invoiceNum.ToString();
+                temp.sInvoiceDate = ds.Tables[0].Rows[0][1].ToString();
+                temp.sInvoiceCost = ds.Tables[0].Rows[0][2].ToString();
+
+                ///Prepares list of item objects 
+                temp.lstItems = new List<clsItem>();
+
+                ///Retrieves relevant line items from database for dislpay 
+                ds = db.ExecuteSQLStatement(clsMainSQL.CheckLineItems(invoiceNum), ref iRet);
+
+                ///Adds line items to list of item objects
+                for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+                {
+                    clsItem tempItem = new clsItem(ds.Tables[0].Rows[i][0].ToString(), ds.Tables[0].Rows[i][1].ToString(), Convert.ToDouble(ds.Tables[0].Rows[i][2]));
+                    temp.lstItems.Add(tempItem);
+                }
+
+                ///Sets temp invoice as currently working invoice 
+                this.invoice = temp;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(MethodInfo.GetCurrentMethod().DeclaringType.Name + "." + MethodInfo.GetCurrentMethod().Name + " -> " + ex.Message);
+            }
         }
     }
 }

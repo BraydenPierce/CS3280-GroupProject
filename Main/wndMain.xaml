@@ -14,8 +14,8 @@
         <Label x:Name="lblInvoiceDate" Content="Invoice Date:" HorizontalAlignment="Left" Margin="28,70,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lblInvoiceNum" Content="Invoice Number:" HorizontalAlignment="Left" Margin="28,129,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lblTotalCost" Content="Total Cost:" HorizontalAlignment="Left" Margin="28,195,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lblCostDisplay" Content="*COST GOES HERE" HorizontalAlignment="Left" Margin="133,195,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lblNumDisplay" Content="*NUM GOES HERE*" HorizontalAlignment="Left" Margin="133,129,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblCostDisplay" Content="" HorizontalAlignment="Left" Margin="133,195,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblNumDisplay" Content="" HorizontalAlignment="Left" Margin="133,129,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lblItems" Content="Items: " HorizontalAlignment="Left" Margin="31,249,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lblCost" Content="Cost:" HorizontalAlignment="Left" Margin="29,313,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lblInvoiceItems" Content="Items on Invoice: " HorizontalAlignment="Left" Margin="341,44,0,0" VerticalAlignment="Top"/>

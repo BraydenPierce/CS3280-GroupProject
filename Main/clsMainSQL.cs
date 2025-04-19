@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls.Primitives;
@@ -18,8 +19,15 @@ namespace GroupProject.Main
         /// <returns>returns string to insert new lineitem into LineItems</returns>
         public static string AddLineItem(clsItem item, string invoiceNum, int idx)
         {
-            string SQL = "INSERT INTO LineItems(InvoiceNum, LineItemNum, ItemCode) Values( " + invoiceNum + ", " + idx.ToString() + ", '" + item.ItemCode  + "')";
-            return SQL;
+            try
+            {
+                string SQL = "INSERT INTO LineItems(InvoiceNum, LineItemNum, ItemCode) Values( " + invoiceNum + ", " + idx.ToString() + ", '" + item.ItemCode + "')";
+                return SQL;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(MethodInfo.GetCurrentMethod().DeclaringType.Name + "." + MethodInfo.GetCurrentMethod().Name + " -> " + ex.Message);
+            }
         }
         
         /// <summary>
@@ -28,9 +36,16 @@ namespace GroupProject.Main
         /// <param name="invoice">Passed in class with already updated total</param>
         /// <returns>returns string to update the total cost of the invoice</returns>
         public static string UpdateInvoiceCost(clsInvoice invoice)
-        {
-            string SQL = "UPDATE Invoices SET TotalCost = " + invoice.sInvoiceCost + " WHERE InvoiceNum = " + invoice.sInvoiceNumber;
-            return SQL;
+        {           
+            try
+            {
+                string SQL = "UPDATE Invoices SET TotalCost = " + invoice.sInvoiceCost + " WHERE InvoiceNum = " + invoice.sInvoiceNumber;
+                return SQL;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(MethodInfo.GetCurrentMethod().DeclaringType.Name + "." + MethodInfo.GetCurrentMethod().Name + " -> " + ex.Message);
+            }
         }
         
         /// <summary>
@@ -39,9 +54,16 @@ namespace GroupProject.Main
         /// <param name="Cost">Total cost as passed in</param>
         /// <returns></returns>
         public static string AddNewInvoice(string date, string cost)
-        {
-            string SQL = "INSERT INTO Invoices(InvoiceDate, TotalCost) Values(#" + date + "#," + cost + ")";
-            return SQL;
+        {            
+            try
+            {
+                string SQL = "INSERT INTO Invoices(InvoiceDate, TotalCost) Values(#" + date + "#," + cost + ")";
+                return SQL;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(MethodInfo.GetCurrentMethod().DeclaringType.Name + "." + MethodInfo.GetCurrentMethod().Name + " -> " + ex.Message);
+            }
         }
 
         /// <summary>
@@ -50,20 +72,33 @@ namespace GroupProject.Main
         /// <param name="invoiceNum">Invoice number passed in</param>
         /// <returns></returns>
         public static string GetInvoice(int invoiceNum)
-        {
-            string SQL = "SELECT InvoiceNum, InvoiceDate, TotalCost FROM Invoices WHERE InvoiceNum = " + invoiceNum;
-            return SQL;
+        {           
+            try
+            {
+                string SQL = "SELECT InvoiceNum, InvoiceDate, TotalCost FROM Invoices WHERE InvoiceNum = " + invoiceNum;
+                return SQL;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(MethodInfo.GetCurrentMethod().DeclaringType.Name + "." + MethodInfo.GetCurrentMethod().Name + " -> " + ex.Message);
+            }
         }
 
         /// <summary>
         /// Gets all items from database
         /// </summary>
-        /// <returns>returns string to select alll items from database.</returns>
+        /// <returns>returns string to select all items from database.</returns>
         public static string GetItem()
-        {
-            //Will update to non default values for final project
-            string SQL = "SELECT ItemCode, ItemDesc, Cost from ItemDesc";
-            return SQL;
+        {           
+            try
+            {
+                string SQL = "SELECT ItemCode, ItemDesc, Cost from ItemDesc";
+                return SQL;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(MethodInfo.GetCurrentMethod().DeclaringType.Name + "." + MethodInfo.GetCurrentMethod().Name + " -> " + ex.Message);
+            }
         }
 
         /// <summary>
@@ -72,9 +107,16 @@ namespace GroupProject.Main
         /// <param name="invoiceNum">invoice number passed in by the user</param>
         /// <returns>returns string to check LineItems based off of Invoice Number passed in and Item ID passed in.</returns>
         public static string CheckLineItems(int invoiceNum)
-        {
-            string SQL = "SELECT LineItems.ItemCode, ItemDesc.ItemDesc, ItemDesc.Cost FROM LineItems, ItemDesc Where LineItems.ItemCode = ItemDesc.ItemCode And LineItems.InvoiceNum = " + invoiceNum.ToString();
-            return SQL;
+        {          
+            try
+            {
+                string SQL = "SELECT LineItems.ItemCode, ItemDesc.ItemDesc, ItemDesc.Cost FROM LineItems, ItemDesc Where LineItems.ItemCode = ItemDesc.ItemCode And LineItems.InvoiceNum = " + invoiceNum.ToString();
+                return SQL;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(MethodInfo.GetCurrentMethod().DeclaringType.Name + "." + MethodInfo.GetCurrentMethod().Name + " -> " + ex.Message);
+            }
         }
 
         /// <summary>
@@ -84,8 +126,15 @@ namespace GroupProject.Main
         /// <returns>string to delete appropriate lineitem rows</returns>
         public static string RemoveLineItems(int invoiceNum)
         {
-            string SQL = "DELETE FROM LineItems WHERE InvoiceNum = " + invoiceNum;
-            return SQL;
+            try
+            {
+                string SQL = "DELETE FROM LineItems WHERE InvoiceNum = " + invoiceNum;
+                return SQL;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(MethodInfo.GetCurrentMethod().DeclaringType.Name + "." + MethodInfo.GetCurrentMethod().Name + " -> " + ex.Message);
+            }
         }
 
         /// <summary>
@@ -93,9 +142,16 @@ namespace GroupProject.Main
         /// </summary>
         /// <returns>Returns invoice number of most recently created invoice</returns>
         public static string RetrieveInvoiceNum()
-        {
-            string SQL = "SELECT MAX(InvoiceNum) FROM Invoices";
-            return SQL;
+        {           
+            try
+            {
+                string SQL = "SELECT MAX(InvoiceNum) FROM Invoices";
+                return SQL;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(MethodInfo.GetCurrentMethod().DeclaringType.Name + "." + MethodInfo.GetCurrentMethod().Name + " -> " + ex.Message);
+            }
         }
 
     }
